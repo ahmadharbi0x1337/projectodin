@@ -1,0 +1,12 @@
+#two {
+  color: blue;
+}
+
+#four {
+  background-color: rgb(44, 196, 44);
+}
+.one,
+.three,
+.five {
+  background-color: rgb(247, 195, 119);
+}
