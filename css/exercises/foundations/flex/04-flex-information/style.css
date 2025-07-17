@@ -1,0 +1,70 @@
+/* I Have Added Some Responsitivity to the exercise */
+
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+.title {
+  font-size: 35px;
+  font-weight: 600;
+}
+.text {
+  text-wrap: wrap;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  flex: 1;
+}
+
+.img-parent-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 52px;
+}
+
+img {
+  width: 200px;
+}
+
+@media (755px < width < 955px) {
+  img {
+    width: 150px;
+  }
+}
+@media (600px < width < 755px) {
+  img {
+    width: 100px;
+  }
+  .text {
+    font-size: 12px;
+  }
+}
+@media (width < 600px) {
+  img {
+    width: 50px;
+  }
+  .text {
+    font-size: 8px;
+  }
+}
+
+/* do not edit this footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+}
