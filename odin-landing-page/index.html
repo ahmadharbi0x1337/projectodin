@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Landing_Page_Odin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./wordpress.svg" alt="wordpress" />
+      </div>
+      <ul class="links">
+        <li><a href="#info">Info</a></li>
+        <li><a href="#quote">Quote</a></li>
+        <li><a href="#cta">CTA</a></li>
+      </ul>
+    </header>
+    <section class="hero">
+      <div class="left-hero">
+        <div class="hero-text">
+          <p>
+            <span>This website is awesome</span><br />This website has some
+            subtext that goes here under the <br />
+            main title, it's smaller font and the color is lower <br />
+            contrast.
+          </p>
+        </div>
+        <button class="btn">Sign up</button>
+      </div>
+      <div class="right-hero">
+        <div class="hero-img">
+          <img src="" alt="hero-img" />
+        </div>
+      </div>
+    </section>
+    <section class="info" id="info"></section>
+    <section class="quote" id="quote"></section>
+    <section class="cta" id="cta"></section>
+    <footer>Copyright &copy; The Odin Project <span id="date"></span></footer>
+  </body>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const date = document.getElementById("date");
+      date.innerHTML = new Date().getFullYear();
+    });
+  </script>
+</html>

@@ -1,0 +1,91 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+/* Vars */
+:root {
+  --dark-p: #1f2937; /*BG_FOR_HEADER_HERO_FOOTER*/
+  --white-p: #e5e7eb; /*BG_FOR_QUOTE*/
+  --white-s: #f9faf8; /**/
+  --blue-p: #3882f6; /*BG_FOR_BTN*/
+}
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+/* Shared Utility */
+.btn {
+  background-color: var(--blue-p);
+  color: white;
+}
+/* Body */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto, sans-serif;
+}
+/* Header - AKA NavBar - */
+header {
+  padding: 10px;
+  background-color: var(--dark-p);
+  width: 100%;
+  height: 72px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.logo img {
+  width: 40px;
+  height: 40px;
+  filter: invert(100%);
+}
+.links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.links a {
+  color: var(--white-p);
+  font-size: 18px;
+}
+
+/* Hero */
+.hero {
+  background-color: var(--dark-p);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* Info */
+.info {
+  background-color: #eee;
+  width: 100%;
+  height: 100vh;
+}
+/* Quote */
+.quote {
+  background-color: var(--white-p);
+  width: 100%;
+  height: 100vh;
+}
+/* CTA */
+.cta {
+  background-color: #eee;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: var(--dark-p);
+  width: 100%;
+  height: 72px;
+  color: var(--white-p);
+}
