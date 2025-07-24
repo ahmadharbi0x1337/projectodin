@@ -13,38 +13,121 @@
         <img src="./wordpress.svg" alt="wordpress" />
       </div>
       <ul class="links">
-        <li><a href="#info">Info</a></li>
-        <li><a href="#quote">Quote</a></li>
-        <li><a href="#cta">CTA</a></li>
+        <li><a href="#info" class="scroll-link">Info</a></li>
+        <li><a href="#quote" class="scroll-link">Quote</a></li>
+        <li><a href="#cta" class="scroll-link">CTA</a></li>
       </ul>
     </header>
     <section class="hero">
-      <div class="left-hero">
-        <div class="hero-text">
-          <p>
-            <span>This website is awesome</span><br />This website has some
-            subtext that goes here under the <br />
-            main title, it's smaller font and the color is lower <br />
-            contrast.
-          </p>
+      <div class="hero-left">
+        <p class="hero-text">
+          <span class="hero-text-span">This website is awesome</span><br />This
+          website has some subtext that goes here under the <br />
+          main title, it's smaller font and the color is lower <br />
+          contrast.
+        </p>
+        <div>
+          <button class="btn">Sign up</button>
         </div>
-        <button class="btn">Sign up</button>
       </div>
-      <div class="right-hero">
+      <div style="padding: 15px">
         <div class="hero-img">
-          <img src="" alt="hero-img" />
+          <img src="./cool_guy.svg" alt="hero-img" />
         </div>
       </div>
     </section>
-    <section class="info" id="info"></section>
-    <section class="quote" id="quote"></section>
-    <section class="cta" id="cta"></section>
-    <footer>Copyright &copy; The Odin Project <span id="date"></span></footer>
+    <section class="info" id="info">
+      <h1>Services Information</h1>
+      <div class="cards">
+        <div class="card">
+          <div class="card-img">
+            <img src="./dark_monitor.svg" alt="dark_monitor" />
+          </div>
+          <div class="card-text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+              eaque quas veniam quasi molestias! Iure unde consequuntur velit
+              pariatur eaque debitis dolorum, explicabo iste magni molestiae
+              quos harum ducimus provident.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="./github_profile.svg" alt="dark_monitor" />
+          </div>
+          <div class="card-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+              unde non ab. Incidunt vero veniam odit laboriosam assumenda quas
+              nemo, culpa eaque deserunt praesentium deleniti alias vitae
+              commodi explicabo blanditiis!
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="./remote.svg" alt="remote" />
+          </div>
+          <div class="card-text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. In
+              cupiditate necessitatibus voluptates ab, magnam voluptatem
+              expedita eos dolor numquam. Aspernatur sint inventore eaque
+              corrupti esse labore at dolores distinctio nulla.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="./email.svg" alt="email" />
+          </div>
+          <div class="card-text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod qui
+              illum itaque deserunt similique explicabo vel nisi magnam odit ut,
+              obcaecati aperiam doloribus omnis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="quote" id="quote">
+      <div class="quote-text">
+        <p>Genius is an infinite capacity for taking pains</p>
+      </div>
+      <div class="quote-author"><h3>-Thomas Carlin</h3></div>
+    </section>
+    <section class="cta" id="cta">
+      <div class="cta-main">
+        <div>
+          <p>
+            <span>Call to action it's time!</span> <br />
+            sign up for our product by clicking that button right over there!
+          </p>
+        </div>
+        <div><button class="btn">Sign up</button></div>
+      </div>
+    </section>
+    <footer>
+      Copyright &copy; The Odin Project <span id="date"></span><br />
+      Created By Ahmad Alharbi With Love.
+    </footer>
   </body>
   <script>
     window.addEventListener("DOMContentLoaded", () => {
+      // Dynamic Date
       const date = document.getElementById("date");
       date.innerHTML = new Date().getFullYear();
+      // Smooth Scrolling becuase safari is not compatible with the html css property!!.
+      document.querySelectorAll(".scroll-link").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const target = document.querySelector(link.getAttribute("href"));
+          console.log(link.getAttribute("href"));
+          target.scrollIntoView({ behavior: "smooth" });
+        });
+      });
     });
   </script>
 </html>
